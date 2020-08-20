@@ -1,3 +1,7 @@
+// Author: Livia Johan
+// File: Lab1a.cpp
+
+
 #include <iostream>
 #include <cstdlib>
 #include "Lab1.h"

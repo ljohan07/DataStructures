@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Lab1.h
+
 #include <iostream>
 #include <cstdlib>
 #include <string>

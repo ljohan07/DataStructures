@@ -10,7 +10,6 @@ PQCFLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm
 PQCXX    := -m64 -std=c++11 -Weffc++ $(PQCFLAGS)
 
 #make Lab1a
-
 Lab1aObjs := Lab1a.o
 
 Lab1a: Lab1a.o
@@ -24,7 +23,6 @@ Lab1a.o: Lab1a.cpp
 
 
 # make Lab1b
-
 Lab1bObjs := Lab1b.o
 
 Lab1b: Lab1b.o

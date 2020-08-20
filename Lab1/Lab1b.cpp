@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Lab1b.cpp
+
 #include <iostream>
 #include <cstdlib>
 #include "Lab1.h"
@@ -32,6 +35,7 @@ int main(void)
 
 	getInfo(integer, flo, dbl, word);
 
+	// create the node
 	Node node(integer, flo, dbl, word);
 
 	COUT << "Node is at address: " << &node << ENDL;
