@@ -22,15 +22,15 @@ Fundamental.o: Fundamental.cpp
 
 
 # Command: make Creative
-CreativeMainObjs :=  CreativeMain.o
+CreativeObjs :=  Creative.o
 
-CreativeMain: CreativeMain.o
-	$(PP) $(PQCXX) -o CreativeMain $(CreativeMainObjs)
-	./CreativeMain
+Creative: Creative.o
+	$(PP) $(PQCXX) -o Creative $(CreativeObjs)
+	./Creative
 
-CreativeMain.o: CreativeMain.cpp
-	$(PP) $(PQCXX) -c CreativeMain.cpp
+Creative.o: Creative.cpp
+	$(PP) $(PQCXX) -c Creative.cpp
 
 # make clean
 clean:
-	rm -rf *.o Fundamental CreativeMain
+	rm -rf *.o Fundamental Creative
