@@ -10,8 +10,7 @@ PQCFLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm
 PQCXX    := -m64 -std=c++11 -Weffc++ $(PQCFLAGS)
 
 
-# classBadPQC Example
-# Command: make classBadPQC
+# Command: make Fundamental
 FundamentalObjs :=  Fundamental.o
 
 Fundamental: Fundamental.o
@@ -22,6 +21,16 @@ Fundamental.o: Fundamental.cpp
 	$(PP) $(PQCXX) -c Fundamental.cpp
 
 
+# Command: make Creative
+CreativeMainObjs :=  CreativeMain.o
+
+CreativeMain: CreativeMain.o
+	$(PP) $(PQCXX) -o CreativeMain $(CreativeMainObjs)
+	./CreativeMain
+
+CreativeMain.o: CreativeMain.cpp
+	$(PP) $(PQCXX) -c CreativeMain.cpp
+
 # make clean
 clean:
-	rm -rf *.o Fundamental
+	rm -rf *.o Fundamental CreativeMain

@@ -12,16 +12,7 @@ int main(){
 	print_triangle(pascal, numRows);
 	search(pascal, numRows);
 	
-	
-	//for(int i = 0; i < numRows; ++i)
-	/*{
-		for(int j = 0; j < i; j++)
-		{
-			COUT << triangle[i][j];
-		}
-		COUT << ENDL;
-	}
-	*/
+	delete pascal;	
 
 	return 0;
 }
