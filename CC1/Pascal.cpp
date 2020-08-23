@@ -38,12 +38,6 @@ int** input(int numRows)
 	}
 
 
-	// print values
-	/*
-	*/
-	
-
-	//COUT << pascal << ENDL;
 	return pascal;
 }
 
