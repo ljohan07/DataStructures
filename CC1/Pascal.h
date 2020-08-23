@@ -10,4 +10,4 @@
 
 int** input(int numRows);
 
-int search(int row, int col);
+int search(int** pascal, int row, int col);
