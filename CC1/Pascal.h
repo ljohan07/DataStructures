@@ -6,8 +6,11 @@
 #include <iostream>
 
 #define COUT std::cout
+#define CIN std::cin
 #define ENDL std::endl
 
 int** input(int numRows);
 
-int search(int** pascal, int row, int col);
+void print_triangle(int** pascal, int numRows);
+
+void search(int** pascal, int numRows);

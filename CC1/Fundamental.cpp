@@ -3,12 +3,15 @@
 int main(){
 	
 	int numRows;
-	int** triangle;
+	int** pascal;
 	COUT << "How many levels do you want to calculate: ";
-	std::cin >> numRows;
+	CIN>> numRows;
 
 
-	triangle = input(numRows);
+	pascal = input(numRows);
+	print_triangle(pascal, numRows);
+	search(pascal, numRows);
+	
 	
 	//for(int i = 0; i < numRows; ++i)
 	/*{
