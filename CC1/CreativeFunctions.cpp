@@ -107,23 +107,22 @@ void totalCombos(int** pascal, int numRows)
 				goodRow = true;
 			}
 		}
-		++row;
 
 		COUT <<  ENDL;
 
 		int sum = 0;
-		for(int j = 0; j < row; ++j)
+		for(int j = 0; j < row+1; ++j)
 		{
 			if(j > 0)
 			{
 				COUT << "+ ";
 			}
-			sum += pascal[row-1][j];
-			COUT << pascal[row-1][j] << " ";
+			sum += pascal[row][j];
+			COUT << pascal[row][j] << " ";
 		}
 		COUT << "= " << sum << ENDL;
 	
-		COUT << "Total possible combinations given " << (row-1) << " options is " << sum << ENDL << ENDL;
+		COUT << "Total possible combinations given " << (row) << " options is " << sum << ENDL << ENDL;
 		
 		COUT << "Continue? [y/n]: ";
 		CIN >> char_cont;
