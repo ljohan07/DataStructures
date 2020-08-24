@@ -3,7 +3,7 @@
 
 #include "CreativeFunctions.cpp"
 
-void main(){
+int main(){
 	
 	int numRows;
 	int** pascal;
@@ -26,4 +26,5 @@ void main(){
 	
 	
 	delete pascal;
+	return 0;
 }

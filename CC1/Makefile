@@ -1,4 +1,5 @@
-
+# Author: Livia Johan
+# File: Makefile
 
 # G++ is for the GCC compiler for C++
 PP := g++

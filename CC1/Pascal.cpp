@@ -42,6 +42,7 @@ int** input(int numRows)
 
 void print_triangle(int** pascal, int numRows)
 {
+	// traverse the 2D array and print corresponding values
 	for(int i = 0; i < numRows; ++i)
 	{
 		for(int j = 0; j < i+1; ++j)
@@ -63,6 +64,7 @@ void search(int** pascal, int numRows)
 
 	while(cont)
 	{
+		// prompt user for row/col, if incorrect, outputs message
 		COUT << "Enter a row and column value to print [two numbers only]: ";
 		CIN >> row;
 		CIN >> col;
@@ -81,7 +83,7 @@ void search(int** pascal, int numRows)
 
 		
 
-
+		// checks if user wants to keep searching for values in the triangle
 		COUT << "Continue? [y/n]: ";
 		CIN >> char_cont;
 		while(char_cont != 'y' && char_cont != 'n')

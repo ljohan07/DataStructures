@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Creative.h
+
 #include "Pascal.cpp"
 
 int* getChoose(int numRows);
