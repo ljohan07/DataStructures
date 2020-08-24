@@ -34,7 +34,6 @@ int** input(int numRows)
 
 		// add this array to the 2D array
 		pascal[i] = row;
-		//delete row;
 	}
 
 
@@ -85,6 +84,11 @@ void search(int** pascal, int numRows)
 
 		COUT << "Continue? [y/n]: ";
 		CIN >> char_cont;
+		while(char_cont != 'y' && char_cont != 'n')
+		{
+			COUT << "Not valid. Continue? [y/n]: ";
+			CIN >> char_cont;
+		}
 		if(char_cont == 'n')
 		{
 			cont = false;

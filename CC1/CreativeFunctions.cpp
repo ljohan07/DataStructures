@@ -53,11 +53,33 @@ int* getChoose(int numRows)
 	return nck;
 }
 
-void getCombos(int** pascal, int* nck)
+void getCombos(int** pascal, int numRows)
 {
-	COUT << "Calculating " << nck[0] << " choose " << nck[1] << "..." << ENDL;
-	int chosen = pascal[nck[0]][nck[1]];
-	COUT << nck[0] << " choose " << nck[1] << " is " << chosen << ENDL;
+	bool cont = true;
+	char char_cont;
+
+
+	while(cont)
+	{
+		int* nck = getChoose(numRows);
+		COUT << "Calculating " << nck[0] << " choose " << nck[1] << "..." << ENDL;
+		int chosen = pascal[nck[0]][nck[1]];
+		COUT << nck[0] << " choose " << nck[1] << " is " << chosen << ENDL << ENDL;
+
+		COUT << "Continue? [y/n]: ";
+		CIN >> char_cont;
+		while(char_cont != 'y' && char_cont != 'n')
+		{
+			COUT << "Not valid. Continue? [y/n]: ";
+			CIN >> char_cont;
+		}
+		if(char_cont == 'n')
+		{
+			cont = false;
+			COUT << ENDL << "Exiting program..." << ENDL << ENDL;
+		}
+		COUT << ENDL;
+	}
 }
 
 void totalCombos(int** pascal, int numRows)
@@ -65,38 +87,62 @@ void totalCombos(int** pascal, int numRows)
 	int row;
 	bool goodRow = false;
 
+	bool cont = true;
+	char char_cont;
 
-	
-	while(!goodRow)
+
+
+	while(cont)
 	{
-		COUT << "How many options would you like to calculate the # of combinations for? ";
-		CIN >> row;
-		if(row > (numRows-1))
+		while(!goodRow)
 		{
-			COUT << row << " is not a valid # of combinations for this triangle. Try again." << ENDL;
+			COUT << "How many options would you like to calculate the # of combinations for? ";
+			CIN >> row;
+			if(row > (numRows-1))
+			{
+				COUT << row << " is not a valid # of combinations for this triangle. Try again." << ENDL;
+			}
+			else
+			{
+				goodRow = true;
+			}
+		}
+		++row;
+
+		COUT <<  ENDL;
+
+		int sum = 0;
+		for(int j = 0; j < row; ++j)
+		{
+			if(j > 0)
+			{
+				COUT << "+ ";
+			}
+			sum += pascal[row-1][j];
+			COUT << pascal[row-1][j] << " ";
+		}
+		COUT << "= " << sum << ENDL;
+	
+		COUT << "Total possible combinations given " << (row-1) << " options is " << sum << ENDL << ENDL;
+		
+		COUT << "Continue? [y/n]: ";
+		CIN >> char_cont;
+		while(char_cont != 'y' && char_cont != 'n')
+		{
+			COUT << "Not valid. Continue? [y/n]: ";
+			CIN >> char_cont;
+		}
+		if(char_cont == 'n')
+		{
+			cont = false;
+			COUT << ENDL << "Exiting program..." << ENDL << ENDL;
 		}
 		else
 		{
-			goodRow = true;
+			COUT << ENDL;
+			goodRow = false;
 		}
 	}
-	++row;
-
-	COUT <<  ENDL;
-
-	int sum = 0;
-	for(int j = 0; j < row; ++j)
-	{
-		if(j > 0)
-		{
-			COUT << "+ ";
-		}
-		sum += pascal[row-1][j];
-		COUT << pascal[row-1][j] << " ";
-	}
-	COUT << "= " << sum << ENDL;
-
-	COUT << "Total possible combinations given " << (row-1) << " options is " << sum << ENDL;
 	
 }
 

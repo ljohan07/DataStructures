@@ -4,7 +4,7 @@ int main(){
 	
 	int numRows;
 	int** pascal;
-	int* nck;
+	//int* nck;
 	COUT << "How many levels do you want to calculate: ";
 	CIN>> numRows;
 
@@ -15,12 +15,12 @@ int main(){
 	COUT << ENDL;
 
 	// Creative portion
-	nck = getChoose(numRows);
-	getCombos(pascal, nck);
+	//nck = getChoose(numRows);
+	getCombos(pascal, numRows);
 	totalCombos(pascal, numRows);
 	
 	
 	delete pascal;
-	delete nck;
+	//delete nck;
 	return 0;
 }

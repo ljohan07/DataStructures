@@ -2,6 +2,6 @@
 
 int* getChoose(int numRows);
 
-void getCombos(int** pascal, int* nck);
+void getCombos(int** pascal, int numRows);
 
 void totalCombos(int** pascal, int rowNum);
