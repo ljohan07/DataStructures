@@ -1,4 +1,7 @@
-#s for the GCC compiler for C++
+# Author: Livia Johan
+# File: Makefile
+
+#is for the GCC compiler for C++
 PP := g++
 
 # CXXFLAGS are the compiler flages for when we compile C++ code in this course 
