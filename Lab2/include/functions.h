@@ -9,6 +9,7 @@
 #define COUT std::cout
 #define ENDL std::endl
 #define VEC std::vector
+#define STRING std::string
 
 template <class T>
 
