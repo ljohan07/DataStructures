@@ -42,5 +42,9 @@ int main()
 	COUT << "Final is  : ";
 	print_array(array5, 5);	
 	COUT << ENDL;
+	for(int i = 0; i < 5; ++i)
+	{
+		COUT << array5[i][0];
+	}
 
 }

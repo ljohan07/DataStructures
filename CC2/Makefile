@@ -26,6 +26,17 @@ $(OBJ)/Fundamental.o: $(SRC)/Fundamental.cpp
 	$(PP) $(CXXFLAGS) -c $(SRC)/Fundamental.cpp -o $@
 
 
+# Command: make PrintSorted
+PrintSortedObjs := $(OBJ)/PrintSorted.o
+
+PrintSorted: $(PrintSortedObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/PrintSorted $(PrintSortedObjs)
+	$(EXE)/./PrintSorted
+
+$(OBJ)/PrintSorted.o: $(SRC)/PrintSorted.cpp
+	$(PP) $(CXXFLAGS) -c $(SRC)/PrintSorted.cpp -o $@
+
+
 # make initialize
 # W ill be called by grader to initialize your objects and executables folders
 
