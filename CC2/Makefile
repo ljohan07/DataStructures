@@ -26,7 +26,7 @@ $(OBJ)/Fundamental.o: $(SRC)/Fundamental.cpp
 	$(PP) $(CXXFLAGS) -c $(SRC)/Fundamental.cpp -o $@
 
 
-# Command: make PrintSorted
+# Command: make Creative
 CreativeObjs := $(OBJ)/Creative.o
 
 Creative: $(CreativeObjs)
