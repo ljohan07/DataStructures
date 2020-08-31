@@ -3,6 +3,7 @@
 
 int main()
 {
+	
 	char array1[19] = {'T', 'H', 'E', 'C', 'O', 'R', 'O', 'N', 'A', 'V', 'I', 'R','U', 'S', 'S', 'U', 'C', 'K', 'S'};
 	COUT << "Initial is: ";
 	print_array(array1, 19);	
@@ -42,9 +43,23 @@ int main()
 	COUT << "Final is  : ";
 	print_array(array5, 5);	
 	COUT << ENDL;
-	for(int i = 0; i < 5; ++i)
-	{
-		COUT << array5[i][0];
-	}
 
+	COUT << "Tests I Developed" << ENDL;
+
+	double arrayA[12] = {77.98, 77.86, 61.04, 72.65, 104.79, 103.14, 1.47, 36.79, 75.09, 48.34, 88.32, 77.08};
+	COUT << "Initial is: ";
+	print_array(arrayA, 12);
+	quickSort(arrayA, 0, 11, 12);
+	COUT << "Final is  : ";
+	print_array(arrayA, 12);
+	COUT << ENDL;
+	
+
+	double arrayB[15] = {112.28, 104.21, 97.36, 90.68, 88.61, 82.06, 69.95, 58.03, 42.09, 39.99, 26.47, 24.68, 21.94, 21.73, 16.54};
+	COUT << "Initial is: ";
+	print_array(arrayB, 15);
+	quickSort(arrayB, 0, 14, 15);
+	COUT << "Final is  : ";
+	print_array(arrayB, 15);
+	COUT << ENDL;
 }

@@ -44,7 +44,7 @@ void quickSort(T* array, int partition, int right,  int length)
 
 
 		
-	if(left == right || left == (right+1))
+	if(left == right || left == right+1)
 	{
 		if(array[partition] > array[right])
 		{
@@ -65,7 +65,7 @@ void quickSort(T* array, int partition, int right,  int length)
 			//print_array(array, length);
 			//print_values(partition, left, right);
 		}
-		while(array[right] >= array[partition] && (left<right))
+		while(array[right] >= array[partition] && (left<=right))
 		{
 			right--;
 			//COUT << "decrement right" << ENDL;
@@ -73,19 +73,24 @@ void quickSort(T* array, int partition, int right,  int length)
 			//print_values(partition, left, right);
 		}
 		if(left < right && array[right] < array[left])
+		//&& array[right]) < array[left])
 		{	
 			swap(array, left, right);
 			//COUT << "swap left and right" << ENDL;
 			//print_array(array, length);
 			//print_values(partition, left, right);
 		}
-		if(left == right)
+		else
 		{
-			right--;
+			swap(array, partition, right);
+		}
+		//if(left == right)
+		//{
+		//	right--;
 			//COUT << "cross over" << ENDL;
 			//print_array(array, length);
 			//print_values(partition, left, right);
-		}
+		//}
 	}	
 	if(right < left)
 	{

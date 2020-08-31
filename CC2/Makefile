@@ -27,13 +27,13 @@ $(OBJ)/Fundamental.o: $(SRC)/Fundamental.cpp
 
 
 # Command: make PrintSorted
-PrintSortedObjs := $(OBJ)/PrintSorted.o
+CreativeObjs := $(OBJ)/Creative.o
 
-PrintSorted: $(PrintSortedObjs)
-	$(PP) $(CXXFLAGS) -o $(EXE)/PrintSorted $(PrintSortedObjs)
-	$(EXE)/./PrintSorted
+Creative: $(CreativeObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/Creative $(CreativeObjs)
+	$(EXE)/./Creative
 
-$(OBJ)/PrintSorted.o: $(SRC)/PrintSorted.cpp
+$(OBJ)/Creative.o: $(SRC)/PrintSorted.cpp
 	$(PP) $(CXXFLAGS) -c $(SRC)/PrintSorted.cpp -o $@
 
 
