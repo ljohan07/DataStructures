@@ -28,6 +28,7 @@ void swap(T* array, int one, int two)
 	array[two] = temp;
 }
 
+// this method was used for debugging
 void print_values(int partition, int left, int right)
 {
 	COUT << "P: " << partition << " L: " << left << " R: " << right << ENDL;
@@ -41,7 +42,7 @@ void quickSort(T* array, int partition, int right,  int length)
 	// set the right partition for the 2nd recursive call 
 	int temp_right = right;
 	
-	// checks the case where either one or two elements in the "subarray"
+	// checks the case where left is the same as right or they are adjacent
 	if(left == right || left == right+1)
 	{
 		if(array[partition] > array[right])
@@ -66,12 +67,12 @@ void quickSort(T* array, int partition, int right,  int length)
 		{
 			right--;
 		}
-		// case where left and right cross over and the one on the right is smaller
-		// ergo right is the smallest
+		// if the one on the right is smaller when done incrementing, swap left and right
 		if(left < right && array[right] < array[left])
 		{	
 			swap(array, left, right);
 		}
+		// case where left and right cross over
 		else
 		{
 			swap(array, partition, right);

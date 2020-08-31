@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Fundamental.cpp 
+
 #include "../include/Quick.h"
 
 
