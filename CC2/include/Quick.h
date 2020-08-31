@@ -36,14 +36,12 @@ void print_values(int partition, int left, int right)
 template <class T>
 void quickSort(T* array, int partition, int right,  int length)
 {
+	// set left value
 	int left = partition + 1;
+	// set the right partition for the 2nd recursive call 
 	int temp_right = right;
-	//COUT << ENDL << ENDL << "NEW!!!" << ENDL;
-	//print_array(array, length);
-	//print_values(partition, left, right);
-
-
-		
+	
+	// checks the case where either one or two elements in the "subarray"
 	if(left == right || left == right+1)
 	{
 		if(array[partition] > array[right])
@@ -58,48 +56,28 @@ void quickSort(T* array, int partition, int right,  int length)
 
 	while(left < right)
 	{
+		// check whether left should be incremented
 		while(array[left] <= array[partition] && (left<right))
 		{
 			left++;
-			//COUT << "increment left" << ENDL;
-			//print_array(array, length);
-			//print_values(partition, left, right);
 		}
+		// check whether right should be decremented
 		while(array[right] >= array[partition] && (left<=right))
 		{
 			right--;
-			//COUT << "decrement right" << ENDL;
-			//print_array(array, length);
-			//print_values(partition, left, right);
 		}
+		// case where left and right cross over and the one on the right is smaller
+		// ergo right is the smallest
 		if(left < right && array[right] < array[left])
-		//&& array[right]) < array[left])
 		{	
 			swap(array, left, right);
-			//COUT << "swap left and right" << ENDL;
-			//print_array(array, length);
-			//print_values(partition, left, right);
 		}
 		else
 		{
 			swap(array, partition, right);
 		}
-		//if(left == right)
-		//{
-		//	right--;
-			//COUT << "cross over" << ENDL;
-			//print_array(array, length);
-			//print_values(partition, left, right);
-		//}
-	}	
-	if(right < left)
-	{
-		//COUT << "swap post-crossover" << ENDL;
-		swap(array, partition, right);
-		//print_array(array, length);
-		//print_values(partition, left, right);
 	}
-
+	// recursive call
 	quickSort(array, partition, right, length);
 	quickSort(array, left, temp_right, length); 
 	
