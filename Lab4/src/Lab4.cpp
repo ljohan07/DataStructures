@@ -2,67 +2,6 @@
 // File: Lab4.cpp
 
 #include "../include/MergeInt.h"
-/*
-void test1(){
-	COUT << "-------------------------" << ENDL;
-	COUT << "Test 1: " << ENDL;
-
-	VECTOR< VECTOR<int> > v = {{1,4}, {2,5}, {6,9}};
-
-	COUT << "Inputs: " << ENDL;
-	COUT << "Intervals: ";
-	printVecVec( v );
-
-	COUT << ENDL << "Solution: " << ENDL;
-	printVecVec( merge(v) );
-}
-void test2(){
-
-	COUT << "-------------------------" << ENDL;
-	COUT << "Test 2: " << ENDL;
-
-	VECTOR< VECTOR<int> > v = {{1,3}, {6,9}, {2,8}};
-
-	COUT << "Inputs: " << ENDL;
-	COUT << "Intervals: ";
-	printVecVec( v );
-
-	COUT << ENDL << "Solution: " << ENDL;
-	printVecVec( merge(v) );
-
-}
-void test3(){
-
-	COUT << "-------------------------" << ENDL;
-	COUT << "Test 3: " << ENDL;
-
-	VECTOR< VECTOR<int> > v = { {1,2}, {3,5}, {6,7}, {8,10}, {12,16}, {4,8} };
-
-	COUT << "Inputs: " << ENDL;
-	COUT << "Intervals: ";
-	printVecVec( v );
-
-	COUT << ENDL << "Solution: " << ENDL;
-	printVecVec( merge(v) );
-
-}
-
-void test4(){
-
-	COUT << "-------------------------" << ENDL;
-	COUT << "Test 4: " << ENDL;
-
-	VECTOR< VECTOR<int> > v = { {7,12}, {3,5}, {1,2}, {5,6}, {8,14}, {9,22}};
-
-	COUT << "Inputs: " << ENDL;
-	COUT << "Intervals: ";
-	printVecVec( v );
-
-	COUT << ENDL << "Solution: " << ENDL;
-	printVecVec( merge(v) );
-
-}
-*/
 
 void ex1(){
 
@@ -129,8 +68,5 @@ int main(){
 	ex2();
 	ex3();
 	ex4();
-
-
-
 	return 0;
 }
