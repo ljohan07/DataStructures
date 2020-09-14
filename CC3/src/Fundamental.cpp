@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Fundamental.cpp
+
 #include "../include/LinearProbe.h"
 #include "../include/DoubleHash.h"
 
