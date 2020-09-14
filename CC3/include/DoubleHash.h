@@ -1,9 +1,13 @@
+// Author: Livia Johan
+// File: DoubleHash.h
+
 #include "LinearProbe.h"
 
 template<class Key, class Value>
 class DoubleHash : public HashTable<Key, Value> {
 
 private:
+  // create second hash function
   long unsigned int HashFunc2( const int& keyToTranslate ) const{
     long unsigned int newKey = keyToTranslate;
     if (keyToTranslate < 0){
@@ -24,7 +28,7 @@ public:
     // Constructor
     DoubleHash(const unsigned int size = 0) : HashTable<Key, Value>(size){}
 
-
+    // find position using the 2 hash functions
     long unsigned int findPos(const Key& theKey) const{
       long unsigned int currentPos;
       long unsigned int iter = 1;
@@ -85,5 +89,6 @@ public:
 
 			return output;
 		}
+    // Destructor
     ~DoubleHash(){};
 };

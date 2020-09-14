@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Creative.cpp
+
 #include "Creative.h"
 
 
@@ -11,15 +14,21 @@ int main(){
   user_pass.insert( { "moses", "burningbushgobrrr" } );
   user_pass.insert( { "enigma", "alanTuring123" } );
   user_pass.insert( { "pineapple", "yellowandspiky" } );
+
   // list of words that aren't allowed in passwords
   STRING newUser = "";
   COUT << "Create new user? (y/n) ";
   CIN >> newUser;
-  if(newUser == "y")
+  // add users
+  while(newUser == "y")
   {
-    create_user(user_pass);
+    DoubleHash<STRING, STRING> temp = create_user(user_pass);
+    user_pass = temp;
+    newUser = "";
+    COUT << "Create new user? (y/n) ";
+    CIN >> newUser;
   }
-// if correct username and password, display the hashtable
+  // check if correct username and password
   STRING loggingIn = "";
   COUT << "Log In? (y/n) ";
   CIN >> loggingIn;
@@ -29,7 +38,7 @@ int main(){
     access = login(user_pass);
   }
 
-
+  // if login info was valid, search for what the user wants
   if (access)
   {
     STRING username = "";

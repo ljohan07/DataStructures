@@ -1,3 +1,5 @@
+// Author: Livia Johan
+// File: LinearProbe.h
 #ifndef LINEARPROBE_H
 #define LINEARPROBE_H
 

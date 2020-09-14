@@ -1,3 +1,5 @@
+// Author: Livia Johan
+// File: Creative.h
 #include "../include/DoubleHash.h"
 #include <string>
 #include <iostream>
@@ -8,10 +10,12 @@
 #define ENDL std::endl
 
 
-
+// creates vector of prohibited words in password
 std::vector<STRING> prohibitedWords(){
     bool cont = true;
     std::vector< STRING > words;
+    // as long as the user doesn't want to quit, program will ask for more
+    // prohibited words
     while(cont)
     {
       STRING word = "";
@@ -36,10 +40,12 @@ void printProhibit(std::vector<STRING> words){
     }
 }
 
+// checks if password meets requirements
 bool checkPW(STRING password, std::vector<STRING> words) {
+  // length must be 8 or more
   if(password.length() < 8)
   {
-    COUT << "Password does not meet specifications";
+    COUT << "Password does not meet specifications" << ENDL;
     return false;
   }
   // iterate through the prohibited words
@@ -47,17 +53,15 @@ bool checkPW(STRING password, std::vector<STRING> words) {
   {
       // maximum beginning index for a substring to look for prohibited word
       long unsigned int maxIndex = password.length() - words[i].length();
-      COUT << words[i] << '\t' << "maxIndex: " << maxIndex << ENDL;
       if(words[i] == password)
       {
           COUT << "not a valid password" << ENDL;
           return false;
       }
-      // checks substrings
+      // checks substrings to see if they are the prohibited word
       for(unsigned int j = 0; j <= maxIndex; ++j)
       {
         STRING temp = password.substr(j, words[i].length());
-        COUT << "SUBSTRING" << temp << ENDL << ENDL;
         if(temp == words[i])
         {
           COUT << "not a valid password" << ENDL;
@@ -68,11 +72,13 @@ bool checkPW(STRING password, std::vector<STRING> words) {
   return true;
 }
 
-void create_user(DoubleHash<STRING, STRING> user_pass){
+// creates a new user for the hash table
+DoubleHash<STRING, STRING> create_user(DoubleHash<STRING, STRING> user_pass){
+  // creates that list of prohibited words
   std::vector< STRING > words = prohibitedWords();
   printProhibit(words);
 
-
+  // asks user for new user/pw
   STRING username = "";
   COUT << "what is your username? \t";
   CIN >> username;
@@ -95,15 +101,17 @@ void create_user(DoubleHash<STRING, STRING> user_pass){
   {
     COUT << "user could not be added" << ENDL;
   }
+  return user_pass;
 }
 
+// see if user input matches any login info from hash table
 bool login(DoubleHash<STRING, STRING> user_pass){
   STRING user = "";
   STRING pass = "";
 
+  // user input for username
   COUT << "user: ";
   CIN >> user;
-  //COUT << ENDL;
 
   if(user_pass.contains(user))
   {
@@ -111,8 +119,7 @@ bool login(DoubleHash<STRING, STRING> user_pass){
 
     COUT << "PASS: ";
     CIN >> pass;
-    //COUT << ENDL;
-
+    //if both username and password work
     if(pass == user_pass[user])
     {
       COUT << "Welcome " << user << "!" << ENDL;
@@ -130,6 +137,7 @@ bool login(DoubleHash<STRING, STRING> user_pass){
   return false;
 }
 
+// searches for username/password pair given just the username
 void search_pass(STRING username, DoubleHash<STRING, STRING> user_pass)
 {
   if(username == "all")
