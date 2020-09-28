@@ -18,7 +18,7 @@ void test1() {
    int arrLen = 12;
    int ans = water(arr, arrLen);
    printArr(arr, arrLen);
-   COUT << ans << ENDL;
+   COUT << ans << " units of water" << ENDL;
 }
 
 void test2() {
@@ -26,7 +26,7 @@ void test2() {
    int arrLen = 12;
    int ans = water(arr, arrLen);
    printArr(arr, arrLen);
-   COUT << ans << ENDL;
+   COUT << ans << " units of water" << ENDL;
 }
 
 void test3() {
@@ -34,5 +34,5 @@ void test3() {
    int arrLen = 8;
    int ans = water(arr, arrLen);
    printArr(arr, arrLen);
-   COUT << ans << ENDL;
+   COUT << ans << " units of water" << ENDL;
 }

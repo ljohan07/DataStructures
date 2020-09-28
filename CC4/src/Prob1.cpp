@@ -31,6 +31,7 @@ void test1() {
 	print_matrix(matrix);
 	VEC<VEC<int>> a = answer(m1, n1, matrix);
 	VEC<VEC<int>> ans = remove_dupes(a);
+	COUT << "Locations on Atlantic that flow to Pacific: ";
 	print_ans(ans);
 }
 
@@ -48,6 +49,7 @@ void test2() {
 	print_matrix(matrix);
 	VEC<VEC<int>> a = answer(m2, n2, matrix);
 	VEC<VEC<int>> ans = remove_dupes(a);
+	COUT << "Locations on Atlantic that flow to Pacific: ";
 	print_ans(ans);
 }
 
@@ -68,5 +70,6 @@ void test3() {
 	print_matrix(matrix);
 	VEC<VEC<int>> a = answer(m2, n2, matrix);
 	VEC<VEC<int>> ans = remove_dupes(a);
+	COUT << "Locations on Atlantic that flow to Pacific: ";
 	print_ans(ans);
 }
