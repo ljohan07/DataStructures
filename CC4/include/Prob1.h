@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Prob1.h
+
 #include <iostream>
 #include <cstdlib>
 #include <vector>
@@ -197,11 +200,12 @@ void print_ans(VEC<VEC<int>> ans) {
 VEC<VEC<int>> remove_dupes(VEC<VEC<int>> temp)
 {
   VEC<VEC<int>> ans;
-
+	// iterate thru the vector with duplicates
 	for(int i = 0; i < (int) temp.size(); ++i) {
 		VEC<int> location = temp[i];
 		bool insert = true;
-
+		// iterate through i+1 to end of array, if it repeats, don't add
+		// this way, only adds the last repetition of the element
 		for(int j = i+1; j < (int) temp.size(); ++j) {
 			if(location == temp[j]) {
 				insert = false;

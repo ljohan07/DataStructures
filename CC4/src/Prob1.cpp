@@ -1,4 +1,6 @@
-// Added queue class
+// Author: Livia Johan
+// File: Prob1.cpp
+
 #include "../include/Prob1.h"
 
 void test1();

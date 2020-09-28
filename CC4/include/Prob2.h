@@ -1,3 +1,6 @@
+// Author: Livia Johan
+// File: Prob2.h
+
 #include <iostream>
 #include <cstdlib>
 
@@ -8,26 +11,38 @@
 
 int water(int heights [], int bars) {
   int ans = 0;
-  stack <int> maxHeight_index;
+  // stores
+  stack <int> height_index;
   for(int i = 0; i < bars; ++i) {
-    while(!maxHeight_index.empty() && heights[i] > heights[maxHeight_index.top()]) {
-      int peak = heights[maxHeight_index.top()];
-      maxHeight_index.pop();
-      if(maxHeight_index.empty()) {
+    while(!height_index.empty() && heights[i] > heights[height_index.top()]) {
+      int peak = heights[height_index.top()];
+      height_index.pop();
+      if(height_index.empty()) {
         break;
       }
-      int width = i - maxHeight_index.top() - 1;
+      int width = i - height_index.top() - 1;
       int minHeight;
-      if(heights[i] < heights[maxHeight_index.top()]){
+      if(heights[i] < heights[height_index.top()]){
         minHeight = heights[i];
       }
       else {
-        minHeight = heights[maxHeight_index.top()];
+        minHeight = heights[height_index.top()];
       }
       int valleyDepth = minHeight-peak;
       ans += valleyDepth * width;
     }
-    maxHeight_index.push(i);
+    height_index.push(i);
   }
   return ans;
+}
+
+void printArr(int heights [], int bars) {
+  COUT << "[";
+  for(int i = 0; i < bars; ++i) {
+    if(i != 0) {
+      COUT << ", ";
+    }
+    COUT << heights[i];
+  }
+  COUT << "]" << ENDL;
 }

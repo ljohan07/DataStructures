@@ -40,6 +40,9 @@ $(OBJ)/Prob2.o: $(SRC)/Prob2.cpp $(include)/queue.h
 initialize:
 	mkdir $(OBJ) $(EXE)
 
-	# Make clean
+# make all
+all: Prob1 Prob2
+
+# Make clean
 clean :
 	rm -rf *.o $(OBJ)/* $(EXE)/*
