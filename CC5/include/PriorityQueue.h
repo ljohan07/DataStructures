@@ -21,8 +21,6 @@ class PriorityQueue{
 		PriorityQueue(unsigned int max) : list(), max_len(max), queueSize( 0 ) {}
 
 		void push(T elem){
-      COUT << "TRYING PUSH" << ENDL;
-
 			if(queueSize < max_len){
 
 				list.Insert( elem );

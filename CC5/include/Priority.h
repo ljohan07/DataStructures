@@ -47,19 +47,19 @@ public:
 
   // different operators
   bool operator>=( const Priority& rhs ) const{
-		return priority < rhs.priority;
+		return priority >= rhs.priority;
 	}
 
 	bool operator>( const Priority& rhs ) const{
-		return priority <= rhs.priority;
-	}
-
-	bool operator<=( const Priority& rhs ) const{
 		return priority > rhs.priority;
 	}
 
+	bool operator<=( const Priority& rhs ) const{
+		return priority <= rhs.priority;
+	}
+
 	bool operator<( const Priority& rhs ) const{
-		return priority >= rhs.priority;
+		return priority < rhs.priority;
 	}
 
 	bool operator==( const Priority& rhs ) const{

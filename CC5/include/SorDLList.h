@@ -25,7 +25,6 @@ public:
        typename DLList<T>::node* prev;
        typename DLList<T>::node* curr = this->head;
 
-
        // Case where inserting value < head value
        if(curr->data > value)
        {

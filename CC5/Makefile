@@ -31,6 +31,7 @@ SorDLLTestObjs := $(OBJ)/SorDLLTest.o
 SorDLLTest: $(SorDLLTestObjs)
 	$(PP) $(CXXFLAGS) -o $(EXE)/SorDLLTest $(SorDLLTestObjs)
 	$(EXE)/./SorDLLTest 10 25 12 10 44 88 7 27 87 4 2
+	$(EXE)/./SorDLLTest 71 73 4 30 8 6 23 64 94 17
 
 
 # SorDLLTest.cpp class both derived classes
@@ -45,6 +46,15 @@ $(OBJ)/DLList.o: $(INC)/DLList.h
 	$(PP) $(CXXFLAGS) -c $(INC)/DLList.h -o $@
 
 
+# Command: make Hospital
+CreativeObjs :=  $(OBJ)/Creative.o
+
+Creative: $(CreativeObjs)
+	$(PP) $(CXXFLAGS) -o $(EXE)/Creative $(CreativeObjs)
+	$(EXE)/./Creative
+
+$(OBJ)/Creative.o: $(SRC)/Creative.cpp $(INC)/Patient.h $(INC)/PriorityQueue.h
+	$(PP) $(CXXFLAGS) -c $(SRC)/Creative.cpp -o $@
 
 
 
