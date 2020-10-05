@@ -1,3 +1,4 @@
+
 #include <cstdlib>
 #include <iostream>
 
@@ -15,6 +16,7 @@ int main () {
 
   bool continu = true;
   unsigned int arrival = 1;
+  //takes in user input and pushes them to queue
   while(continu)
   {
     STRING name;
@@ -34,6 +36,7 @@ int main () {
     ++arrival;
   }
 
+  // pops all elements of queue
   while(!kyoo.empty()) {
     COUT << "Next Patient: " << kyoo.front() << ENDL;
     kyoo.pop();

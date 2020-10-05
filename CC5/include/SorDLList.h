@@ -1,3 +1,5 @@
+//author: Livia Johan
+
 #include "DLList.h"
 
 #define COUT std::cout
@@ -42,7 +44,7 @@ public:
          }
 
 
-         /* insert the node, temp, at the end */
+         /* insert the node, temp, after previous */
          prev -> next = temp;
 
          /* Allocate the previous node */
@@ -51,7 +53,7 @@ public:
 
          if(curr != NULL)
          {
-
+           // allocate where temp is to have previous and next pointers
            curr->prev = temp;
            curr->prev->next = curr;
            prev = temp;
@@ -70,9 +72,7 @@ public:
 
   friend std::ostream& operator<<( std::ostream& output, const SorDLList<T>& theList ){
 
-    typename SorDLList<T>::node* curr;
-    //COUT << theList.head << ", " << theList.tail << ENDL;
-    //COUT << theList.head->data << ", " << theList.tail->data << ENDL;
+    typename DLList<T>::node* curr;
 
 
      if (theList.IsEmpty())

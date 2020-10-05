@@ -1,3 +1,5 @@
+// Author: Livia Johan
+// File: Patient.h
 #include <cstdlib>
 #include <iostream>
 

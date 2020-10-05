@@ -1,3 +1,5 @@
+// Author: Livia Johan
+// File: priorityQueue.h
 #ifndef QUEUE_H
 #define QUEUE_H
 

@@ -1,12 +1,4 @@
-/**********************************************
-* File: DLLtest.cpp
-* Author: Matthew Morrison
-* Email: matt.morrison@nd.edu
-*
-* This file contains the main driver function
-* for a Doubly Linked List test
-**********************************************/
-
+// File: SorDLLTest
 #include "../include/SorDLList.h"
 
 /********************************************
